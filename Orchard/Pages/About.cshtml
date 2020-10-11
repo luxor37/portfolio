@@ -1,0 +1,42 @@
+﻿@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var content = await Orchard.GetContentItemByHandleAsync("alias:about-me");
+}
+
+<!-- About-->
+<section class="resume-section" id="about" style="background-image: url(@Orchard.AssetUrl((string) content.Content.Image.Image.Paths[1])); 
+                                      -ms-background-size: cover; background-size: cover">
+    <div class="resume-section-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="col-md-2 show_only_desktop">
+                    <div class="border_image">
+                        <img class="rounded-circle img-fluid height-100" src="@Orchard.AssetUrl((string) content.Content.Image.Image.Paths[0])">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="desktop_vertical_center">
+                    <h1 class="mb-0">
+                        @content.Content.AboutMePart.FirstName.Text
+                        <span class="text-primary">@content.Content.AboutMePart.LastName.Text</span>
+                    </h1>
+                    <div class="subheading mb-5 semi_transparent_box">
+                        @content.Content.AboutMePart.Address.Text · @content.Content.AboutMePart.PhoneNumber.Text ·
+                        <a href="mailto:@content.Content.AboutMePart.email.Text">@content.Content.AboutMePart.email.Text</a>
+                    </div>
+                    <div class="social-icons">
+                        <a class="social-icon" href="@content.Content.AboutMePart.LinkedIn.Text" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="@content.Content.AboutMePart.GitHub.Text" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row semi_transparent_box">
+            <p class="lead ">
+                @Html.Raw(content.Content.HtmlBodyPart.Html)
+            </p>
+        </div>
+    </div>
+</section>
