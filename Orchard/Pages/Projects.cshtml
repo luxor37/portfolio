@@ -1,7 +1,13 @@
-﻿<!-- Awards-->
-<section class="resume-section" id="awards">
+﻿@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var projects = await Orchard.GetContentItemByHandleAsync("alias:interests");
+}
+
+<!-- Projects -->
+<section class="resume-section" id="projects">
     <div class="resume-section-content">
-        <h2 class="mb-5">Awards & Certifications</h2>
+        <h2 class="mb-5">Projects</h2>
         <ul class="fa-ul mb-0">
             <li>
                 <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>

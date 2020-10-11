@@ -108,79 +108,6 @@
       ]
     },
     {
-      "Name": "BlogPost",
-      "DisplayName": "BlogPost",
-      "Settings": {
-        "ContentTypeSettings": {
-          "Creatable": true,
-          "Listable": true,
-          "Draftable": true,
-          "Versionable": true,
-          "Securable": true
-        },
-        "FullTextAspectSettings": {}
-      },
-      "ContentTypePartDefinitionRecords": [
-        {
-          "PartName": "BlogPost",
-          "Name": "BlogPost",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "3"
-            }
-          }
-        },
-        {
-          "PartName": "MarkdownBodyPart",
-          "Name": "MarkdownBodyPart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "2",
-              "Editor": "Wysiwyg"
-            },
-            "ContentIndexSettings": {},
-            "MarkdownBodyPartSettings": {}
-          }
-        },
-        {
-          "PartName": "TitlePart",
-          "Name": "TitlePart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "0"
-            }
-          }
-        },
-        {
-          "PartName": "AliasPart",
-          "Name": "AliasPart",
-          "Settings": {
-            "ContentTypePartSettings": {
-              "Position": "1"
-            },
-            "AliasPartSettings": {},
-            "ContentIndexSettings": {}
-          }
-        },
-        {
-          "PartName": "PreviewPart",
-          "Name": "PreviewPart",
-          "Settings": {
-            "ContentTypePartSettings": {},
-            "PreviewPartSettings": {
-              "Pattern": "/blogpost/{{ ContentItem.Content.AliasPart.Alias }}"
-            },
-            "ContentIndexSettings": {}
-          }
-        },
-        {
-          "PartName": "LocalizationPart",
-          "Name": "LocalizationPart",
-          "Settings": {}
-        }
-      ]
-    },
-    {
       "Name": "About",
       "DisplayName": "About",
       "Settings": {
@@ -342,7 +269,6 @@
       "DisplayName": "Job",
       "Settings": {
         "ContentTypeSettings": {
-          "Creatable": true,
           "Listable": true,
           "Draftable": true,
           "Versionable": true,
@@ -384,6 +310,126 @@
           "Settings": {
             "ContentTypePartSettings": {
               "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Education",
+      "DisplayName": "Education",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Education",
+          "Name": "Education",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "School"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "5"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "School",
+      "DisplayName": "School",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "School",
+          "Name": "School",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "EducationPart",
+          "Name": "EducationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
             }
           }
         }
@@ -730,7 +776,47 @@
           }
         }
       ]
+    },
+    {
+      "Name": "EducationPart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true
+        }
+      },
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "SchoolName",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "School Name",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "ProgramName",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Program Name",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Date",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Date",
+              "Position": "2"
+            }
+          }
+        }
+      ]
     }
   ],
-  "Serial": 232
+  "Serial": 268
 }

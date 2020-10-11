@@ -1,4 +1,10 @@
-﻿<!-- Interests-->
+﻿@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var interests = await Orchard.GetContentItemByHandleAsync("alias:interests");
+}
+
+<!-- Interests-->
 <section class="resume-section" id="interests">
     <div class="resume-section-content">
         <h2 class="mb-5">Interests</h2>
