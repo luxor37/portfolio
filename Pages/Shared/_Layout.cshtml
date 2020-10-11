@@ -8,21 +8,36 @@
 
     <title>Remi Martel - Portfolio</title>
 
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+
+
     <!--Bootstrap-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
     <!--Style-->
     <link rel="stylesheet" href="~/style/main.min.css" />
 </head>
-<body>
-    @await Html.PartialAsync("_Header.cshtml")
 
-    <div class="main">
-        <main>
-            @RenderBody()
-        </main>
+<body id="page-top">
+@await Html.PartialAsync("_Nav")
+    
+    <div class="container-fluid p-0">
+        @RenderBody()
 
-        @await Html.PartialAsync("_Footer.cshtml")
+        <!--await Html.PartialAsync("_Footer")-->
     </div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
 </body>
 </html>
