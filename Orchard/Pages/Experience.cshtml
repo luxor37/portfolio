@@ -1,0 +1,36 @@
+﻿@inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var experience = await Orchard.GetContentItemByHandleAsync("alias:experience");
+}
+
+<!-- Experience-->
+<section class="resume-section" id="experience" style="background-image: url(@Orchard.AssetUrl((string) experience.Content.Image.Image.Paths[0])); 
+                                      -ms-background-size: cover; background-size: cover">
+    <div class="resume-section-content">
+        <h2 class="mb-5">@experience.Content.TitlePart.Title</h2>
+
+        @foreach (var job in experience.Content.BagPart.ContentItems)
+        {
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <div class="row">
+                        <div class="col-md-2 show_only_desktop">
+                            <div class="border_image">
+                                <img class="rounded-circle img-fluid height-100" src="@Orchard.AssetUrl((string) job.Image.Image.Paths[0])">
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 class="mb-0">@Html.Raw(job.JobDescription.JobTitle.Html)</h3>
+                            <div class="subheading mb-3">@Html.Raw(job.JobDescription.CompanyName.Html)</div>
+                            <p>@Html.Raw(job.JobDescription.JobDescription.Html)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="text-primary">@Html.Raw(job.JobDescription.DateOfEmployement.Html)</span>
+                </div>
+            </div>
+        }
+    </div>
+</section>
