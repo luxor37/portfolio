@@ -1,21 +1,17 @@
-﻿@using OrchardCore.ContentManagement
+﻿@using OrchardCore.Navigation
+@inject OrchardCore.IOrchardHelper Orchard
 
 @{
-    ContentItem contentItem = Model.ContentItem;
-    var navigation = contentItem.Content["navigation"];
+    var menuItems = await Orchard.GetContentItemByHandleAsync("alias:main-nav");
 }
 
 <header>
     <nav class="show_only_desktop">
         <div class="sidenav">
-            @foreach (var item in Model.Items)
+            @foreach (var menuItem in menuItems.Content.MenuItemsListPart.MenuItems)
             {
-                <a href="@item.">About</a>
+                <a href="@menuItem.LinkMenuItemPart.Url">@menuItem.LinkMenuItemPart.Name</a>
             }
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
         </div>
     </nav>
 
@@ -28,15 +24,15 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+                @{
+                    var isFirst = true;
+                }
+                @foreach (var menuItem in menuItems.Content.MenuItemsListPart.MenuItems)
+                {
+                    <li class="nav-item @{ if (isFirst == true){@Html.Raw("active"); isFirst = false;}}">
+                        <a class="nav-link" href="@menuItem.LinkMenuItemPart.Url">@menuItem.LinkMenuItemPart.Name<span class="sr-only">(current)</span></a>
+                    </li>
+                }
             </ul>
         </div>
     </nav>
