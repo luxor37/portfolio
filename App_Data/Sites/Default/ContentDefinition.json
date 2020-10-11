@@ -179,6 +179,215 @@
           "Settings": {}
         }
       ]
+    },
+    {
+      "Name": "About",
+      "DisplayName": "About",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "About",
+          "Name": "About",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "6"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "5"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "AboutMePart",
+          "Name": "AboutMePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Experience",
+      "DisplayName": "Experience",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Experience",
+          "Name": "Experience",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Job"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "5"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Job",
+      "DisplayName": "Job",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Job",
+          "Name": "Job",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "JobDescription",
+          "Name": "JobDescription",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
     }
   ],
   "ContentPartDefinitionRecords": [
@@ -368,7 +577,160 @@
         }
       },
       "ContentPartFieldDefinitionRecords": []
+    },
+    {
+      "Name": "Image",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true
+        }
+      },
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "MediaField",
+          "Name": "Image",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Content Picker",
+              "Position": "0"
+            },
+            "ContentIndexSettings": {},
+            "MediaFieldSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "JobDescription",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true
+        }
+      },
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "JobTitle",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "JobTitle",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "CompanyName",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "CompanyName",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "JobDescription",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "JobDescription",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "DateOfEmployement",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "DateOfEmployement",
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AboutMePart",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true,
+          "Description": "Name, adress, phone..."
+        }
+      },
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "TextField",
+          "Name": "email",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "email",
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "PhoneNumber",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Phone Number",
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "FirstName",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "First Name",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "LastName",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Last Name",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "Address",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Address",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "LinkedIn",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "LinkedIn",
+              "Position": "5"
+            }
+          }
+        },
+        {
+          "FieldName": "TextField",
+          "Name": "GitHub",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "GitHub",
+              "Position": "6"
+            }
+          }
+        }
+      ]
     }
   ],
-  "Serial": 135
+  "Serial": 232
 }

@@ -11,10 +11,12 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="compilerconfig.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\style\template.min.css" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
+    <None Include="wwwroot\template\js\scripts.js" />
   </ItemGroup>
 
   <ItemGroup>

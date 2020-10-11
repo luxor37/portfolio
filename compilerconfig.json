@@ -14,5 +14,9 @@
   {
     "outputFile": "wwwroot/style/main.css",
     "inputFile": "wwwroot/style/main.less"
+  },
+  {
+    "outputFile": "wwwroot/style/template.css",
+    "inputFile": "wwwroot/style/template.less"
   }
 ]
