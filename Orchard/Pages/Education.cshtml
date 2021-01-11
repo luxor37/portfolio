@@ -21,3 +21,40 @@
         </div>
     </div>
 </section>
+
+@* @inject OrchardCore.IOrchardHelper Orchard
+
+@{
+    var education = await Orchard.GetContentItemByHandleAsync("alias:education");
+}
+
+<section class="resume-section" id="education" style="background-image: url(@Orchard.AssetUrl((string) education.Content.Image.Image.Paths[0])); 
+                                      -ms-background-size: cover; background-size: cover">
+    
+    <div class="resume-section-content">
+        <h2 class="mb-5">@education.Content.TitlePart.Title</h2>
+
+        @foreach (var school in education.Content.BagPart.ContentItems)
+        {
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <div class="row">
+                        <div class="col-md-2 show_only_desktop">
+                            <div class="border_image">
+                                <img class="rounded-circle img-fluid height-100" src="@Orchard.AssetUrl((string) school.Image.Image.Paths[0])">
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 class="mb-0">@Html.Raw(school.SchoolDescription.ProgramName.Html)</h3>
+                            <div class="subheading mb-3">@Html.Raw(school.SchoolDescription.SchoolName.Html)</div>
+                            <p>@Html.Raw(school.SchoolDescription.Description.Html)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="text-primary">@Html.Raw(school.SchoolDescription.Date.Html)</span>
+                </div>
+            </div>
+        }
+    </div>
+</section> *@
