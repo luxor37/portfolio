@@ -1,7 +1,8 @@
 @inject OrchardCore.IOrchardHelper Orchard
 
 @{
-    var implications = await Orchard.GetContentItemByHandleAsync("alias:implications");
+    var alias = "alias:implications-" + Orchard.CultureName();
+    var implications = await Orchard.GetContentItemByHandleAsync(alias);
 }
 
  <section class="resume-section parallax" id="implications" style="background-image: url(@Orchard.AssetUrl((string) implications.Content.Image.Image.Paths[0]));">

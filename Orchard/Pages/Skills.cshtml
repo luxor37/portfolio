@@ -1,7 +1,8 @@
 ﻿@inject OrchardCore.IOrchardHelper Orchard
 
 @{
-    var skills = await Orchard.GetContentItemByHandleAsync("alias:skills");
+    var alias = "alias:skills-" + Orchard.CultureName();
+    var skills = await Orchard.GetContentItemByHandleAsync(alias);
 }
 
  <section class="resume-section parallax" id="skills" style="background-image: url(@Orchard.AssetUrl((string) skills.Content.Image.Image.Paths[0]));">

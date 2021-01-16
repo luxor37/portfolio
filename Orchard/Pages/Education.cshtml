@@ -3,7 +3,8 @@
 @inject OrchardCore.IOrchardHelper Orchard
 
 @{
-    var education = await Orchard.GetContentItemByHandleAsync("alias:education");
+    var alias = "alias:education-" + Orchard.CultureName();
+    var education = await Orchard.GetContentItemByHandleAsync(alias);
 }
 
 <section class="resume-section parallax" id="education" style="background-image: url(@Orchard.AssetUrl((string) education.Content.Image.Image.Paths[0]));" >

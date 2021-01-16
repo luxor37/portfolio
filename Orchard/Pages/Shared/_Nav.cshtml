@@ -1,7 +1,8 @@
 ﻿@inject OrchardCore.IOrchardHelper Orchard
 
 @{
-    var menu = await Orchard.GetContentItemByHandleAsync("alias:main-nav");
+    var alias = "alias:main-nav-" + Orchard.CultureName();
+    var menu = await Orchard.GetContentItemByHandleAsync(alias);
 }
 
 
@@ -17,6 +18,21 @@
             {
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="@menuItem.LinkMenuItemPart.Url">@menuItem.LinkMenuItemPart.Name</a></li>
             }
+            <hr class="m-0" />
+            <li class="nav-item">
+                @{
+                    var lang = "";
+                    if(Orchard.CultureName() == "en"){
+                        lang = "FR";
+                    }
+                    else{
+                        lang = "EN";
+                    }
+                }
+                <a class="nav-link" asp-route="RedirectToLocalizedContent" asp-route-area="OrchardCore.ContentLocalization" asp-route-targetculture="fr">
+                    @lang
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
