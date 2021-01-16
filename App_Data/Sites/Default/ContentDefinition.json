@@ -8,7 +8,8 @@
           "Listable": true,
           "Draftable": true,
           "Versionable": true
-        }
+        },
+        "FullTextAspectSettings": {}
       },
       "ContentTypePartDefinitionRecords": [
         {
@@ -44,7 +45,29 @@
         {
           "PartName": "MenuItemsListPart",
           "Name": "MenuItemsListPart",
-          "Settings": {}
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "Menu",
+          "Name": "Menu",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "5"
+            }
+          }
         }
       ]
     },
@@ -101,6 +124,15 @@
           "Name": "ContentMenuItem",
           "Settings": {
             "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
               "Position": "1"
             }
           }
@@ -114,7 +146,6 @@
         "ContentTypeSettings": {
           "Creatable": true,
           "Listable": true,
-          "Draftable": true,
           "Versionable": true,
           "Securable": true
         },
@@ -193,7 +224,6 @@
         "ContentTypeSettings": {
           "Creatable": true,
           "Listable": true,
-          "Draftable": true,
           "Versionable": true,
           "Securable": true
         },
@@ -373,7 +403,6 @@
         "ContentTypeSettings": {
           "Creatable": true,
           "Listable": true,
-          "Draftable": true,
           "Versionable": true,
           "Securable": true
         },
@@ -430,6 +459,313 @@
           "Settings": {
             "ContentTypePartSettings": {
               "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Skills",
+      "DisplayName": "Skills",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Skills",
+          "Name": "Skills",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "5"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "4"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "SkillsCategory"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Skill",
+      "DisplayName": "Skill",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Skill",
+          "Name": "Skill",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "HtmlBodyPart",
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SkillsCategory",
+      "DisplayName": "Skills Category",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "SkillsCategory",
+          "Name": "SkillsCategory",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Skill"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "TitlePart",
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Implication",
+      "DisplayName": "Implication",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Implication",
+          "Name": "Implication",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "ImplicationDescription",
+          "Name": "ImplicationDescription",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Implications",
+      "DisplayName": "Implications",
+      "Settings": {
+        "ContentTypeSettings": {
+          "Creatable": true,
+          "Listable": true,
+          "Draftable": true,
+          "Versionable": true,
+          "Securable": true
+        },
+        "FullTextAspectSettings": {}
+      },
+      "ContentTypePartDefinitionRecords": [
+        {
+          "PartName": "Implications",
+          "Name": "Implications",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "PartName": "AliasPart",
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "PartName": "BagPart",
+          "Name": "BagPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "DisplayName": "Bag",
+              "Description": "Provides a collection behavior for your content item.",
+              "Position": "3"
+            },
+            "BagPartSettings": {
+              "ContainedContentTypes": [
+                "Implication"
+              ]
+            },
+            "ContentIndexSettings": {}
+          }
+        },
+        {
+          "PartName": "Image",
+          "Name": "Image",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "PartName": "LocalizationPart",
+          "Name": "LocalizationPart",
+          "Settings": {
+            "ContentTypePartSettings": {
+              "Position": "5"
             }
           }
         },
@@ -835,7 +1171,74 @@
           }
         }
       ]
+    },
+    {
+      "Name": "ImplicationDescription",
+      "Settings": {
+        "ContentPartSettings": {
+          "Attachable": true
+        }
+      },
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Title",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Title",
+              "Position": "0"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "EventName",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "EventName",
+              "Position": "1"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Description",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Description",
+              "Position": "2"
+            }
+          }
+        },
+        {
+          "FieldName": "HtmlField",
+          "Name": "Date",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Menu",
+      "Settings": {},
+      "ContentPartFieldDefinitionRecords": [
+        {
+          "FieldName": "HtmlField",
+          "Name": "Name",
+          "Settings": {
+            "ContentPartFieldSettings": {
+              "DisplayName": "Name",
+              "Position": "0"
+            },
+            "HtmlFieldSettings": {},
+            "ContentIndexSettings": {}
+          }
+        }
+      ]
     }
   ],
-  "Serial": 272
+  "Serial": 377
 }

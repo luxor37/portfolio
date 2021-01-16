@@ -1,36 +1,84 @@
-﻿body {
-  font-family: "Lato", sans-serif;
+:root{
+    --primary: #0c6f12;
+    --primary_highlight: #0da216;
+
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #f27602;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --success: #28a745;
+    --light: #f8f9fa;
+    --body-color: #212529;
+    --thumbnail-borner: #dee2e6;
+    --image-border: #c3c3c3;
 }
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
+
+.underline{
+    text-decoration: underline !important;
 }
-.sidenav a {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+
+.border_image {
+    border: 7px solid var(--image-border);
+    border-radius: 100%;
 }
-.sidenav a:hover {
-  color: #f1f1f1;
+
+.semi_transparent_box {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--white);
+    margin-bottom: 20px !important;
 }
-.main {
-  margin-left: 200px;
-  /* Same as the width of the sidenav */
+
+.parallax{
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
+
+section{
+    max-width: 100% !important;
+    width: 100%
+}
+
+.color-white {
+    color: var(--white);
+}
+
+@media screen and (min-width: 769px) {
+    .show_only_mobile {
+        display: none !important;
+    }
+
+    .show_only_desktop {
+        display: unset !important;
+    }
+
+    .desktop_vertical_center {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .show_only_desktop {
+        display: none !important;
+    }
+
+    .social-icons {
+        margin-bottom: 15px !important;
+    }
 }

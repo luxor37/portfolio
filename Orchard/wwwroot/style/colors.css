@@ -1,1 +1,35 @@
-﻿
+:root{
+    --primary: #0c6f12;
+    --primary_highlight: #0da216;
+
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #f27602;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --gray-blue: #495057;
+    --light: #f8f9fa;
+
+    --dark-dark-blue: #212529;
+    --thumbnail-borner: #dee2e6;
+    --image-border: #c3c3c3;
+    --almost-white: #e9ecef;
+
+    --cream-orange: #e0aa95;
+    --table-primary-td: #edd2c7;
+    --table-primary-hover: #e7c2b4;
+    --table-secondary-td: #d6d8db;
+    --table-primary-tbody: #ddab98;
+    --table-secondary-tbody: #b3b7bb;
+    --table-hover: #c8cbcf;
+
+    --table-success: #c3e6cb;
+}
